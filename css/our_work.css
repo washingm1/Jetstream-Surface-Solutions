@@ -1,0 +1,88 @@
+
+/* =============================================
+   CSS VARIABLES & RESET
+   ============================================= */
+:root {
+  --blue: #0062FF;
+  --blue-dark: #0048cc;
+  --navy: #0D2B5D;
+  --navy-mid: #1a2e50;
+  --slate: #6b849e;
+  --slate-light: #8fa4bb;
+  --white: #ffffff;
+  --off-white: #f4f6f9;
+  --gray-light: #e0e4ea;
+  --gray-mid: #c8cdd6;
+  --text-dark: #0d1f3c;
+  --text-body: #3a4a5c;
+  --text-muted: #6b849e;
+  --font-display: 'Kdam Thmor Pro', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+  --radius: 6px;
+  --shadow: 0 4px 24px rgba(13,31,60,0.12);
+  --shadow-lg: 0 8px 40px rgba(13,31,60,0.18);
+}
+
+/* ===== GALLERY ===== */
+.our-work-hero {
+    padding: 5rem;
+    text-align: center;
+}
+
+.our-work-title {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+}
+
+.gallery {
+    padding: 2rem 1.5rem 4rem;
+}
+
+.gallery__container {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    column-count: 3;
+    column-gap: 1.25rem;
+}
+
+.gallery__item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1.25rem;
+
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.gallery__image {
+    display: block;
+    width: 100%;
+    height: auto; /* Keeps original proportions */
+
+    transition: transform 0.35s ease;
+}
+
+.gallery__item:hover .gallery__image {
+    transform: scale(1.03);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .gallery__container {
+        column-count: 2;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .gallery__container {
+        column-count: 1;
+    }
+
+    .gallery {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
