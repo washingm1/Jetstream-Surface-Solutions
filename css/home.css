@@ -181,6 +181,7 @@ height: 100%;
   overflow: hidden;
 }
 .ba-slider__before { clip-path: inset(0 50% 0 0); }
+.ba-slider__after  { clip-path: inset(0 0 0 50%); }
 
 /* Blank image slots — backend replaces with <img> tags */
 .ba-img-blank {

@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.ba-slider').forEach(slider => {
     const handle  = slider.querySelector('.ba-slider__handle');
     const before  = slider.querySelector('.ba-slider__before');
+    const after = slider.querySelector('.ba-slider__after');
     let dragging  = false;
 
     function setPos(clientX) {
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       pct = Math.max(2, Math.min(98, pct));
       handle.style.setProperty('--pos', `${pct}%`);
       before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+           after.style.clipPath  = `inset(0 0 0 ${pct}%)`;    
     }
 
     const knob = handle.querySelector('.ba-slider__knob');
