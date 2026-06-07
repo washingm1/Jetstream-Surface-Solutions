@@ -11,6 +11,21 @@
     <title>Book an Appointment</title>
 </head>
 <body>
+
+  <style>
+    .booking-wrapper {
+        min-height: 80vh; 
+           display: flex;
+    flex-direction: column;
+    }
+
+    .footer {
+          margin-top: auto;
+    }
+
+  </style>
+
+
   <!-- ===== NAVBAR ===== -->
 <header class="navbar">
   <div class="navbar__top">
@@ -18,7 +33,7 @@
       <!-- spacer to balance the contact info on the right -->
     </div>
     <div class="navbar__logo">
-        <a href="./index.html">
+        <a href="../index.html">
       <img src="../media/jetstream_surface_solutions_logo.PNG" alt="JetStream Surface Solutions Powerwashing logo" class="navbar__logo-img" />
         </a>
     </div>
@@ -46,9 +61,12 @@
   </div>
 </header>
 <!-- Calendly inline widget begin -->
+ <div class="booking-wrapper">
 <div class="calendly-inline-widget" data-url="https://calendly.com/jetstreamsurfacesolutions/1hr" style="min-width:320px;height:700px;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- Calendly inline widget end -->
+ </div>
+
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">

@@ -29,6 +29,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 420px;
+  max-height: 40vh;
   position: relative;
   overflow: hidden;
   background: var(--gray-light);
@@ -55,6 +56,19 @@
   z-index: 2;
   clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
+
+
+.hero-image-wrap {
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-image {
+height: 100%;
+  scale: 1.2;
+}
+
+
 .hero__headline {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2.2rem);
@@ -118,7 +132,7 @@
   gap: 2rem;
 }
 .service-card {
-  border-radius: 10px;
+  border-radius: 3px;
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -151,7 +165,7 @@
 }
 .ba-slider {
   position: relative;
-  border-radius: 10px;
+  border-radius:2px;
   overflow: hidden;
   aspect-ratio: 4/3;
   cursor: col-resize;
@@ -238,8 +252,8 @@
 .contact-section__inner { max-width: 720px; margin: 0 auto; }
 .contact-form-box {
   background: var(--white);
-  border-radius: 12px;
-  box-shadow: var(--shadow-lg);
+  border-radius: 2px;
+  box-shadow: var(--shadow-md);
   padding: 3rem 3rem 2.5rem;
 }
 .contact-form-box__title {

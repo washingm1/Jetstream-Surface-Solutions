@@ -27,12 +27,18 @@
 .our-work-hero {
     padding: 5rem;
     text-align: center;
+    background-color: var(--navy)
 }
 
-.our-work-title {
+.section-title {
     font-family: var(--font-display);
-    font-size: 1.2rem;
+    color: var(--white);
 }
+
+.our-work-subtitle {
+    color: var(--white);;
+}
+
 
 .gallery {
     padding: 2rem 1.5rem 4rem;
@@ -41,7 +47,6 @@
 .gallery__container {
     max-width: 1400px;
     margin: 0 auto;
-
     column-count: 3;
     column-gap: 1.25rem;
 }
@@ -52,7 +57,7 @@
     margin-bottom: 1.25rem;
 
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
