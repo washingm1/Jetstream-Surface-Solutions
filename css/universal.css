@@ -311,7 +311,7 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 900px) {
   .services__grid { grid-template-columns: 1fr 1fr; }
   .who-we-are__inner { gap: 2.5rem; }
-}
+
 @media (max-width: 768px) {
   .navbar__top { padding: 0.4rem 1.25rem; }
   .navbar__contact { display: none; }

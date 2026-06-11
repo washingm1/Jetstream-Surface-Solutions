@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="media/jetstream_surface_solutions_logo_favicon.png">
   <title>JetStream Surface Solutions</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" defer/>
@@ -10,7 +11,95 @@
   <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" defer/>
   <link rel="stylesheet" href="./css/home.css" defer/>
     <link rel="stylesheet" href="./css/universal.css" defer/>
+
 </head>
+<style>
+:root {
+  --blue: #0062FF;
+  --blue-dark: #0048cc;
+  --navy: #0D2B5D;
+  --navy-mid: #1a2e50;
+  --slate: #6b849e;
+  --slate-light: #8fa4bb;
+  --white: #ffffff;
+  --off-white: #f4f6f9;
+  --gray-light: #e0e4ea;
+  --gray-mid: #c8cdd6;
+  --text-dark: #0d1f3c;
+  --text-body: #3a4a5c;
+  --text-muted: #6b849e;
+  --font-display: 'Kdam Thmor Pro', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+  --radius: 6px;
+  --shadow: 0 4px 24px rgba(13,31,60,0.12);
+  --shadow-lg: 0 8px 40px rgba(13,31,60,0.18);
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 420px;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--gray-light);
+}
+.hero__image-side { position: relative; z-index: 1; }
+.hero__img-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  background: var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__img-placeholder .placeholder-content { color: #aaa; }
+.hero__content {
+  background: var(--navy);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 6rem;
+  position: relative;
+  z-index: 2;
+  clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+
+.hero-image-wrap {
+    height: 100%;
+
+}
+
+.hero-image {
+width:1700px;
+height: 60vh;
+overflow: hidden;
+object-fit: cover;
+scale: 1.2;
+}
+
+.hero__headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.35;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.02em;
+}
+
+.hero__content {
+  height: 100%;
+}
+
+</style>
+
 <body>
 
   <!-- ===== NAVBAR ===== -->
@@ -53,7 +142,7 @@
   <section class="hero">
     <div class="hero__image-side">
       <div class="hero-image-wrap">
-          <!-- <img class="hero-image" src="./media/residential_cleaning_2_after.jpg" alt=""> -->
+          <img class="hero-image" src="./media/residential_cleaning_4_after.webp" alt="">
       </div>
     </div>
     <div class="hero__content">
@@ -94,9 +183,7 @@
     <div class="services__grid">
       <div class="service-card">
         <div class="service-card__img img-placeholder">
-          <div class="placeholder-content">
-            <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><rect x="4" y="10" width="40" height="28" rx="3" stroke="#bbb" stroke-width="2"/><circle cx="16" cy="21" r="5" stroke="#bbb" stroke-width="2"/><path d="M4 32l10-8 8 6 8-10 14 10" stroke="#bbb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
+          <img src="./media/IMG_2432.jpg" alt="">
         </div>
         <div class="service-card__body">
           <h3>Residential Washing</h3>
@@ -180,7 +267,7 @@
 
     </div>
 
-    <a href="#gallery" class="btn btn--primary before-after__cta">Visit Gallery</a>
+    <a href="./html/our_work.html" class="btn btn--primary before-after__cta">Visit Gallery</a>
   </section>
 
   <!-- ===== CONTACT FORM ===== -->
