@@ -98,7 +98,7 @@
 /* =============================================
    BEFORE & AFTER
    ============================================= */
-.before-after { background: var(--slate); padding: 5rem 2rem; text-align: center; }
+.before-after { background: var(--navy-mid); padding: 5rem 2rem; text-align: center; }
 .ba-gallery {
   max-width: 1000px;
   margin: 0 auto 2.5rem;
@@ -305,7 +305,6 @@
   font-size: 0.78rem;
   color: rgba(255,255,255,0.35);
 }
-
 /* =============================================
    RESPONSIVE
    ============================================= */
@@ -322,9 +321,6 @@
   .navbar__nav .btn--primary { display: none; }
   .navbar__logo-img { height: 56px; }
 
-  .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero__img-placeholder { min-height: 240px; }
-  .hero__content { clip-path: none; padding: 2.5rem 1.5rem; align-items: center; text-align: center; }
 
   .who-we-are { padding: 3.5rem 1.25rem; }
   .who-we-are__inner { grid-template-columns: 1fr; gap: 2rem; }

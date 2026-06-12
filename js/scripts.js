@@ -28,6 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const mediaQuery = window.matchMedia('(min-width: 768px)');
+
+function handleScreenResize(e) {
+  if (e.matches) {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+  }
+}
+
+// Listen for screen size changes
+mediaQuery.addEventListener('change', handleScreenResize);
+
   document.addEventListener('click', (e) => {
     if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
       hamburger.classList.remove('open');

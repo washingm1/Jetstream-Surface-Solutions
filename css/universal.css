@@ -305,21 +305,36 @@ a { text-decoration: none; color: inherit; }
   color: rgba(255,255,255,0.35);
 }
 
+
 /* =============================================
    RESPONSIVE
    ============================================= */
+   #mobileLogoLink {
+  display: none;
+}
 @media (max-width: 900px) {
   .services__grid { grid-template-columns: 1fr 1fr; }
   .who-we-are__inner { gap: 2.5rem; }
 
 @media (max-width: 768px) {
-  .navbar__top { padding: 0.4rem 1.25rem; }
+
+  .navbar__top {
+    display: none;
+  }
+  
+  #logoLink {
+    display: none;
+  }
+  #mobileLogoLink {
+    display: flex;
+  }
+
   .navbar__contact { display: none; }
-  .navbar__nav { padding: 0.5rem 1.25rem; }
+  .navbar__nav { padding: 0.5rem 1.25rem; justify-content: center; align-items: center; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .navbar__nav .btn--primary { display: none; }
-  .navbar__logo-img { height: 56px; }
+  .navbar__logo-img { height: 100px; }
 
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero__img-placeholder { min-height: 240px; }

@@ -12,14 +12,14 @@
 </head>
 
 <body>
-  <!-- ===== NAVBAR ===== -->
+   <!-- ===== NAVBAR ===== -->
 <header class="navbar">
   <div class="navbar__top">
     <div class="navbar__top-left">
       <!-- spacer to balance the contact info on the right -->
     </div>
     <div class="navbar__logo">
-        <a href="../index.html">
+        <a href="../index.html" id="logoLink">
       <img src="../media/jetstream_surface_solutions_logo.webp" alt="JetStream Surface Solutions Powerwashing logo" class="navbar__logo-img" />
         </a>
     </div>
@@ -28,13 +28,16 @@
       <span>jetstreamsurfacesolutions@gmail.com</span>
     </div>
   </div>
+
   <nav class="navbar__nav">
+          <img src="../media/jetstream_surface_solutions_logo.webp" alt="JetStream Surface Solutions Powerwashing logo" id="mobileLogoLink" class="navbar__logo-img" />
+
     <div class="nav-links">
       <a href="./about.html">About</a>
       <a href="./our_work.html">Our Work</a>
       <a href="./contact.html">Contact</a>
     </div>
-    <a href="../html/booking.html" class="btn btn--primary navbar__book-btn">Book Appointment</a>
+    <a href="./booking.html" class="btn btn--primary navbar__book-btn">Book Appointment</a>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -43,7 +46,7 @@
     <a href="./about.html" class="mobile-menu__link">About</a>
     <a href="./contact.html" class="mobile-menu__link">Contact</a>
     <a href="./our_work.html" class="mobile-menu__link">Our Work</a>
-    <a href="../html/booking.html" class="btn btn--primary mobile-menu__cta">Book Appointment</a>
+    <a href="./booking.html" class="btn btn--primary mobile-menu__cta">Book Appointment</a>
   </div>
 </header>
 
