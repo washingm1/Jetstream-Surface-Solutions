@@ -46,82 +46,124 @@
   position: relative;
   overflow: hidden;
   background: var(--gray-light);
-    transition: all 0.3s ease-in-out; 
+  transition: all 0.3s ease-in-out;
 }
-.hero__image-side { position: relative; z-index: 1; }
 
-.hero__img-placeholder .placeholder-content { color: #aaa; }
+/* Image side */
+.hero__image-side {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-right: -8%;
+}
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.hero__image-side:hover .hero-image {
+  transform: scale(1.03);
+}
+
+/* Content side */
 .hero__content {
   background: var(--navy);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 6rem;
+  padding: 4rem 4rem 4rem 5rem;
   position: relative;
   z-index: 2;
   clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
-    transition: all 0.3s ease-in-out; 
+  gap: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-
-.hero-image-wrap {
-    height: 100%;
-
-}
-
-.hero-image {
-width:1700px;
-height: 60vh;
-overflow: hidden;
-object-fit: cover;
-scale: 1.2;
-
+.hero__eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 0.85rem;
 }
 
 .hero__headline {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
   font-weight: 400;
   color: var(--white);
-  line-height: 1.35;
-  margin-bottom: 1.75rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
   letter-spacing: 0.02em;
 }
 
-.hero__content {
-  height: 100%;
+.hero__sub {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+  max-width: 340px;
 }
 
+.hero__cta {
+  /* inherits .btn .btn--primary */
+}
+
+/* ── Mobile ── */
 @media (max-width: 768px) {
   .hero {
-  display: flex;
-  min-height: 420px;
-  height: 60vh;
-  position: relative;
-  overflow: hidden;
-  background: none;
-}
-  .hero__content {
+    display: flex;
+    min-height: 420px;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+    background: none;
+  }
+
+  .hero__image-side {
     position: absolute;
+    inset: 0;
     width: 100%;
-      clip-path: none;
-      background: none;
-      text-align: center;
-      align-items: center;
+    height: 100%;
   }
-.hero__headline {
-  font-size: clamp(2rem, 3vw, 2.2rem);
-  color: var(--white);
-  line-height: 1.35;
 
-}
   .hero-image {
-    filter: brightness(40%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(38%);
   }
 
-}
+  .hero__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    clip-path: none;
+    background: none;
+    text-align: center;
+    align-items: center;
+    padding: 2.5rem 1.5rem;
+  }
 
+  .hero__eyebrow {
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  .hero__headline {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .hero__sub {
+    max-width: 100%;
+    color: rgba(255, 255, 255, 0.55);
+  }
+}
 </style>
 
 <body>
@@ -144,8 +186,9 @@ scale: 1.2;
   </div>
 
   <nav class="navbar__nav">
-          <img src="./media/jetstream_surface_solutions_logo.webp" alt="JetStream Surface Solutions Powerwashing logo" id="mobileLogoLink" class="navbar__logo-img" />
-
+    <a href="./index.html" id="mobileLogoLink">
+          <img src="./media/jetstream_surface_solutions_logo.webp" alt="JetStream Surface Solutions Powerwashing logo"  class="navbar__logo-img" />
+    </a>
     <div class="nav-links">
       <a href="./html/about.html">About</a>
       <a href="./html/our_work.html">Our Work</a>
@@ -164,18 +207,18 @@ scale: 1.2;
   </div>
 </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero__image-side">
-      <div class="hero-image-wrap">
-          <img class="hero-image" src="./media/residential_cleaning_4_after.webp" alt="">
-      </div>
-    </div>
-    <div class="hero__content">
-      <h1 class="hero__headline">Providing powerwashing solutions for your home or business</h1>
-      <a href="#quote" class="btn btn--primary hero__cta">Get A Free Quote</a>
-    </div>
-  </section>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero__image-side">
+    <img class="hero-image" src="./media/residential_cleaning_4_after.avif" alt="Clean home exterior after professional pressure washing" />
+  </div>
+  <div class="hero__content">
+    <p class="hero__eyebrow">Licensed & Insured · Clayton, NC</p>
+    <h1 class="hero__headline">Professional Pressure Washing for Your Home or Business</h1>
+    <p class="hero__sub">Serving Raleigh, Clayton, Fuquay-Varina & Smithfield with reliable, high-quality results every time.</p>
+    <a href="./html/contact.html" class="btn btn--primary hero__cta">Get a Free Quote</a>
+  </div>
+</section>
 
   <!-- ===== WHO WE ARE ===== -->
   <section class="who-we-are" id="about">
@@ -209,7 +252,7 @@ scale: 1.2;
     <div class="services__grid">
       <div class="service-card">
         <div class="service-card__img img-placeholder">
-          <img src="./media/IMG_2432.jpg" alt="">
+          <img src="./media/white_house_cleaning.avif" alt="">
         </div>
         <div class="service-card__body">
           <h3>Residential Washing</h3>
@@ -254,12 +297,12 @@ scale: 1.2;
           <div class="ba-slider__after">
             <span class="ba-label ba-label--after">After</span>
             <!-- Backend: replace this div with an <img> tag -->
-            <img class="ba-img-blank" id="after1" src="./media/residential_cleaning_6_after.jpg"></img>
+            <img class="ba-img-blank" id="after1" src="./media/residential_cleaning_6_after.avif"></img>
           </div>
           <div class="ba-slider__before">
             <span class="ba-label ba-label--before">Before</span>
             <!-- Backend: replace this div with an <img> tag -->
-            <img class="ba-img-blank" id="before1" src="./media/residential_cleaning_6_before.jpg"></img>
+            <img class="ba-img-blank" id="before1" src="./media/residential_cleaning_6_before.avif"></img>
           </div>
         </div>
         <div class="ba-slider__handle">
@@ -275,12 +318,12 @@ scale: 1.2;
           <div class="ba-slider__after">
             <span class="ba-label ba-label--after">After</span>
             <!-- Backend: replace this div with an <img> tag -->
-            <img class="ba-img-blank" id="after2" src="./media/residential_cleaning_2_after.jpg"></img>
+            <img class="ba-img-blank" id="after2" src="./media/residential_cleaning_2_after.avif"></img>
           </div>
           <div class="ba-slider__before">
             <span class="ba-label ba-label--before">Before</span>
             <!-- Backend: replace this div with an <img> tag -->
-            <img class="ba-img-blank" id="before2" src="./media/residential_cleaning_2_before.jpg"></img>
+            <img class="ba-img-blank" id="before2" src="./media/residential_cleaning_2_before.avif"></img>
           </div>
         </div>
         <div class="ba-slider__handle">
@@ -302,9 +345,10 @@ scale: 1.2;
       <div class="contact-form-box" id="book">
         <h2 class="contact-form-box__title">CONTACT</h2>
                <form action="https://formsubmit.co/2699ec5dd9b62089e3f9d92dd14c059b" method="POST" />
-            <input type="hidden" name="_subject" value="New Inquiry from My Website!">
+            <input type="hidden" name="_subject" value="Jetstream SS - New Form Submission">
           <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Jetstream Surface Solutions! We will get back to you as soon as possible.">
           <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
           <div class="form-row">
             <div class="form-group">
               <label for="firstName">First Name</label>
@@ -360,7 +404,7 @@ scale: 1.2;
       <span>jetstreamsurfacesolutions@gmail.com</span>
       </div>
     </div>
-    <div class="footer__copy">© 2025 JetStream Surface Solutions. All rights reserved.</div>
+    <div class="footer__copy">© 2026 JetStream Surface Solutions. All rights reserved.</div>
   </footer>
 
   <script src="./js/scripts.js" defer></script>

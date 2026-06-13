@@ -91,15 +91,6 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   justify-content: center;
 }
-.placeholder-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  color: #aab;
-  font-size: 0.8rem;
-  font-family: var(--font-body);
-}
 
 /* =============================================
    NAVBAR
@@ -134,7 +125,7 @@ a { text-decoration: none; color: inherit; }
   padding: 0.4rem 1rem;
 }
 .navbar__logo-img {
-  height: 150px;
+  height: 200px;
   width: auto;
   object-fit: contain;
 }
