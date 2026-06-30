@@ -13,7 +13,7 @@
   --gray-light: #e0e4ea;
   --gray-mid: #c8cdd6;
   --text-dark: #0d1f3c;
-  --text-body: #3a4a5c;
+  --text-body: #000000;
   --text-muted: #6b849e;
   --font-display: 'Kdam Thmor Pro', sans-serif;
   --font-body: 'Barlow', sans-serif;
@@ -25,35 +25,169 @@
 /* =============================================
    WHO WE ARE
    ============================================= */
-.who-we-are { padding: 5rem 2rem; background: var(--white); }
+.who-we-are { padding: 5.5rem 2rem; background: var(--white); overflow: visible; }
 .who-we-are__inner {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 4.5rem;
   align-items: center;
 }
-.who-we-are__text .section-title { margin-bottom: 1.25rem; }
+
+.who-we-are__eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 0.6rem;
+}
+.who-we-are__text .section-title {
+  margin-bottom: 1.25rem;
+  font-size: 3.2rem;
+  position: relative;
+  padding-bottom: 1.1rem;
+}
+.who-we-are__text .section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 3px;
+  background: var(--blue);
+  border-radius: 2px;
+}
 .who-we-are__text p {
   font-size: 0.95rem;
   color: var(--text-body);
   line-height: 1.8;
   margin-bottom: 1rem;
 }
-.who-we-are__image .img-placeholder { width: 100%; aspect-ratio: 4/3; }
+
+.who-we-are__highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+.who-we-are__highlights li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+.who-we-are__highlights i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 0.6rem;
+  flex-shrink: 0;
+}
+
+/* Image side */
+.who-we-are__image {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.who-we-are__image-frame {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4/3;
+  z-index: 2;
+}
+.who-we-are__image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.who-we-are__image:hover .who-we-are__image-frame img { transform: scale(1.04); }
+
+/* Offset accent panel behind the photo */
+.who-we-are__image::before {
+  content: "";
+  position: absolute;
+  top: -1.25rem;
+  right: -1.25rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--navy) 100%);
+  border-radius: var(--radius);
+  z-index: 1;
+}
+
+/* Floating stat badge */
+.who-we-are__badge {
+  position: absolute;
+  left: -1.5rem;
+  bottom: -1.5rem;
+  z-index: 4;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.who-we-are__badge-num {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  color: var(--blue);
+  line-height: 1;
+}
+.who-we-are__badge-label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  line-height: 1.35;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .who-we-are { padding: 3.5rem 1.25rem; }
+  .who-we-are__inner { grid-template-columns: 1fr; gap: 3rem; }
+  .who-we-are__text { text-align: center; }
+  .who-we-are__text .section-title::after { left: 50%; transform: translateX(-50%); }
+  .who-we-are__highlights { align-items: center; }
+  .who-we-are__image { max-width: 320px; }
+  .who-we-are__image::before { top: -0.85rem; right: -0.85rem; }
+  .who-we-are__badge { left: -0.75rem; bottom: -1rem; padding: 0.85rem 1rem; }
+  .who-we-are__badge-num { font-size: 1.5rem; }
+  .who-we-are__badge-label { font-size: 0.65rem; }
+}
 
 /* =============================================
    CONTACT BANNER
    ============================================= */
 .contact-banner {
-  background: var(--navy);
+  background: linear-gradient(to right, #0d2b5d 0%,#0048cc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.25rem;
   text-align: center;
+
 }
 .contact-banner__text {
   font-family: var(--font-display);
@@ -98,7 +232,7 @@
 /* =============================================
    BEFORE & AFTER
    ============================================= */
-.before-after { background: var(--navy-mid); padding: 5rem 2rem; text-align: center; }
+.before-after { background: var(--navy); padding: 5rem 2rem; text-align: center; }
 .ba-gallery {
   max-width: 1000px;
   margin: 0 auto 2.5rem;
@@ -211,7 +345,7 @@
 }
 .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.8rem; margin-top: .8rem; }
 .form-group label {
   font-family: var(--font-display);
   font-size: 0.8rem;
