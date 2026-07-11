@@ -1,0 +1,11 @@
+# Jetstream Surface Solutions - robots.txt
+# Allows all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: /js/
+Disallow: /css/
+Disallow: /media/private/
+
+# Specify sitemap location
+Sitemap: https://jetstreamsurfacesolutions.com/sitemap.xml
