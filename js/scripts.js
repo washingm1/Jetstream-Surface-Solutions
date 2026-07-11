@@ -144,4 +144,35 @@ mediaQuery.addEventListener('change', handleScreenResize);
 
   document.head.insertAdjacentHTML('beforeend', `<style>.revealed { opacity: 1 !important; transform: translateY(0) !important; }</style>`);
 
+
+  // ============================================
+  // GALLERY FILTER
+  // ============================================
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery__item');
+
+  if (filterBtns.length > 0) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('filter-btn--active'));
+        btn.classList.add('filter-btn--active');
+
+        // Filter gallery items
+        galleryItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            item.classList.remove('hidden');
+            item.style.display = 'inline-block';
+          } else {
+            item.classList.add('hidden');
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
 });
