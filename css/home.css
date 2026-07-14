@@ -300,9 +300,6 @@
   border-top: 4px solid var(--blue);
   position: relative;
 }
-.service-card:nth-child(1) { border-top-color: #00B4D8; }
-.service-card:nth-child(2) { border-top-color: #FF8C42; }
-.service-card:nth-child(3) { border-top-color: #2ECC71; }
 .service-card:hover {
   transform: translateY(-8px) scale(1.01);
   box-shadow: var(--shadow-lg);
@@ -338,9 +335,7 @@
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
-.service-card:nth-child(1) .service-card__icon { background: rgba(0, 180, 216, 0.15); color: #00B4D8; }
-.service-card:nth-child(2) .service-card__icon { background: rgba(255, 140, 66, 0.15); color: #FF8C42; }
-.service-card:nth-child(3) .service-card__icon { background: rgba(46, 204, 113, 0.15); color: #2ECC71; }
+.service-card__icon { background: transparent; color: var(--blue); }
 .service-card__body h3 {
   font-family: var(--font-display);
   font-size: 1.15rem;
@@ -658,9 +653,9 @@
   color: var(--white);
 }
 .why-choose-us__number {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: bold;
-  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 600;
+  font-family: var(--font-body);
   margin-bottom: 0.5rem;
   color: #00B4D8;
 }
