@@ -17,7 +17,7 @@
   --text-muted: #6b849e;
   --font-display: 'Kdam Thmor Pro', sans-serif;
   --font-body: 'Barlow', sans-serif;
-  --radius: 6px;
+  --radius: 2px;
   --shadow: 0 4px 24px rgba(13,31,60,0.12);
   --shadow-lg: 0 8px 40px rgba(13,31,60,0.18);
 }
@@ -63,7 +63,7 @@ textarea:focus-visible {
   font-size: 1rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  padding: 0.75rem 1.75rem;
+  padding: 1rem 1.75rem;
   border-radius: var(--radius);
   border: none;
   cursor: pointer;
@@ -90,14 +90,14 @@ textarea:focus-visible {
   height: 300px;
 }
 .btn--primary {
-  background: #22c4ff;
-  color: var(--white);
-  box-shadow: 0 4px 16px rgba(0,98,255,0.35);
+  background: #00D4FF;
+  color: #ffffff;
+  font-weight: 500;
 }
 .btn--primary:hover {
-  background: var(--blue-dark);
+  background: #00B8E6;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,98,255,0.45);
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.4);
 }
 .btn--primary:active {
   transform: translateY(0);

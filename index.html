@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:site_name" content="Jetstream Surface Solutions | Residential and Commerical Pressure Washing"/>
   <meta name = "description" content="Home page for Jetstream surface solutions, a pressure washing company based out of Clayton, NC">
     <link rel="icon" type="image/x-icon" href="./media/jetstream_surface_solutions_logo_favicon.png">
-
+<meta property="og:image" content="https://yourwebsite.com" />
   <!-- Google Fonts Connections -->
   <link rel="preconnect" href="https://fonts.googleapis.com" defer/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin defer/>
@@ -14,7 +15,7 @@
   <link rel="stylesheet" href="./css/home.css" defer/>
     <link rel="stylesheet" href="./css/universal.css" defer/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
-<title>Professional Residential & Commercial Power Washing Solutions | Clayton, Raleigh, and Surrounding NC Areas</title>
+<title>Jetstream Surface Solutions | Professional Residential & Commercial Power Washing Solutions | Clayton, Raleigh, and Surrounding NC Areas</title>
 <style>
 :root {
   --blue: #0062FF;
@@ -42,7 +43,7 @@
    ============================================= */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   min-height: 420px;
   height: 60vh;
   position: relative;
@@ -61,27 +62,24 @@
 .hero-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:cover;
   object-position: center;
   display: block;
   transition: transform 0.6s ease;
 }
-.hero__image-side:hover .hero-image {
-  transform: scale(1.03);
-}
 
 /* Content side */
 .hero__content {
- /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0d2b5d+0,0048cc+100 */
-background: linear-gradient(to right, #0d2b5d 0%,#0048cc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(to right, rgba(13, 43, 93, 0.85) 30%, rgba(13, 43, 93, 0.5) 70%,rgba(13, 43, 93, 0.30) 90%, transparent 100%);
   display: flex;
+  width: 50%;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 4rem 4rem 4rem 10rem;
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 2;
-  clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
   gap: 0;
   transition: all 0.3s ease-in-out;
 }
@@ -219,20 +217,6 @@ background: linear-gradient(to right, #0d2b5d 0%,#0048cc 100%); /* W3C, IE10+, F
     <h1 class="hero__headline">Professional Pressure Washing for Your Home or Business</h1>
     <p class="hero__sub">Serving Raleigh, Clayton, Fuquay-Varina & Smithfield with reliable, high-quality results every time.</p>
     <a href="./contact" class="btn btn--primary hero__cta">Get a Free Quote</a>
-    <div class="trust-badges">
-      <div class="trust-badge">
-        <i class="fa-solid fa-shield-check"></i>
-        <span>Licensed & Insured</span>
-      </div>
-      <div class="trust-badge">
-        <i class="fa-solid fa-handshake"></i>
-        <span>Free Estimates</span>
-      </div>
-      <div class="trust-badge">
-        <i class="fa-solid fa-star"></i>
-        <span>100% Guaranteed</span>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -311,14 +295,14 @@ background: linear-gradient(to right, #0d2b5d 0%,#0048cc 100%); /* W3C, IE10+, F
 
   <!-- ===== CONTACT BANNER ===== -->
   <section class="contact-banner">
-    <p class="contact-banner__text">Ready to see your surfaces shine? Let's get started!</p>
-    <a href="#contact" class="btn btn--primary">Schedule a Free Estimate</a>
+    <p class="contact-banner__text">Not sure if we can help you? Get in touch!</p>
+    <a href="#contact" class="btn btn--primary">Get in Contact</a>
   </section>
 
   <!-- ===== BEFORE & AFTER ===== -->
   <section class="before-after">
-    <h2 class="section-title section-title--light">Before and After</h2>
-    <p class="section-subtitle section-subtitle--light">A few examples of the results you'll get with us!</p>
+    <h2 class="section-title section-title--dark">Before and After</h2>
+    <p class="section-subtitle section-subtitle--dark">A few examples of the results you'll get with us!</p>
 
     <div class="ba-gallery">
 
@@ -487,7 +471,7 @@ background: linear-gradient(to right, #0d2b5d 0%,#0048cc 100%); /* W3C, IE10+, F
             <span>Smithfield</span>
           </div>
         </div>
-        <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">Interested in service outside our normal area? <a href="./contact" style="color: var(--blue); text-decoration: none; font-weight: 600;">Contact us</a> to discuss possibilities.</p>
+        <!-- <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">Interested in service outside our normal area? <a href="./contact" style="color: var(--blue); text-decoration: none; font-weight: 600;">Contact us</a> to discuss possibilities.</p> -->
       </div>
     </div>
   </section>
@@ -514,6 +498,7 @@ background: linear-gradient(to right, #0d2b5d 0%,#0048cc 100%); /* W3C, IE10+, F
   </section> -->
   <!-- ===== CONTACT FORM ===== -->
   <section class="contact-section" id="contact">
+    <h1 class="section-title contact-cta" >Ready to bring your home back to life?</h1>
     <div class="contact-section__inner">
       <div class="contact-form-box" id="book">
         <h2 class="contact-form-box__title">CONTACT</h2>
