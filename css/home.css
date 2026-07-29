@@ -577,7 +577,6 @@
   gap: 2rem;
   align-items: center;
 }
-css
 .service-area__map {
   background: linear-gradient(135deg, #f0f4ff 0%, #e8eef7 100%);
   border-radius: 8px;
@@ -589,8 +588,9 @@ css
   box-shadow: 0 8px 32px rgba(0, 98, 255, 0.15);
   border: 1px solid rgba(0, 98, 255, 0.1);
   min-height: 350px;
-  max-width: 100%; /* added */
+  max-width: 100%;
 }
+
 .service-area__map iframe {
   border-radius: 0;
   display: block;
@@ -608,7 +608,8 @@ css
 .service-area__text {
   padding-left: 4vw;
   text-align: left;
-  width: 800px;
+  max-width: 800px;   /* changed from width: 800px */
+  width: 100%;        /* added — lets it shrink to fit its grid column */
 }
 
 @media (max-width: 1580px) {
@@ -680,7 +681,11 @@ css
     max-width: 100%;
     min-width: 0;
   }
-  .service-area__text { text-align: center; }
+  .service-area__text {
+    max-width: 100%;
+    padding-left: 0;
+  }
+   
   .service-area__locations { grid-template-columns: 1fr; }
 }
 
